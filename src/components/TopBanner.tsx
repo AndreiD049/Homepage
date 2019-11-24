@@ -28,15 +28,12 @@ export default function TopBanner() {
         <Hidden smDown>
             <Container maxWidth="md">
                 <Grid container justify="center" style={{ marginTop: "10px" }}>
-                    <div id="test"
+                    <Grid item className={classes.root}                         
                         onMouseEnter={(e) => { setBlurredClass("down"); }}
                         onMouseLeave={(e) => { setBlurredClass("up"); }}
-                        style={{width: "100%", height: "100%"}}
                     >
-                        <Grid item className={classes.root} >
-                            <BlurredFrame class={blurredClass} text="lorem ipsum etc"/>
-                        </Grid>
-                    </div>
+                        <BlurredFrame class={blurredClass} text="lorem ipsum etc"/>
+                    </Grid>
                 </Grid>
             </Container>
         </Hidden>
