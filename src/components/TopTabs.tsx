@@ -3,12 +3,17 @@ import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
-
 type TabLabels = {
     labels: string[],
 }
 
-export const TopTabs = ({labels} : TabLabels) => {
+export default function TopTabs({labels} : TabLabels) {
+        const [value, setValue] = React.useState(0);
+
+        const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
+            setValue(newValue);
+        };
+
         let rendered_tabs: React.ReactNode[] = [];
         for (let l of labels) {
             rendered_tabs.push(
@@ -16,15 +21,19 @@ export const TopTabs = ({labels} : TabLabels) => {
             );
         }
 
-        return (<Paper square>
-            <Tabs
-                value={0}
-                centered
-                indicatorColor="secondary"
-                textColor="secondary"
-                aria-label="top page navigation tabs"
-                >
-                {rendered_tabs}
-            </Tabs>
-        </Paper>);
+        return (
+            <Paper square>
+                <Tabs
+                    value={value}
+                    indicatorColor="secondary"
+                    textColor="secondary"
+                    onChange={handleChange}
+                    centered
+                    aria-label="top page navigation tabs"
+                    className="topt"
+                    >
+                    {rendered_tabs}
+                </Tabs>
+            </Paper>
+        );
 }
