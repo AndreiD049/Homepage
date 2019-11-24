@@ -6,7 +6,7 @@ import Link from '@material-ui/core/Link';
 export default function Copyright() {
     return (
         <Box mt={10} mb={5}>
-            <Typography variant="body2" color="textSecondary" align="center">
+            <Typography variant="body2" color="primary" align="center">
                 {'Copyright © '}
                 <Link color="inherit" href="/">
                 Andrei Dimitrascu

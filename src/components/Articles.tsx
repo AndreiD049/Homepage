@@ -34,7 +34,7 @@ export default function(props: Articles) {
                     </Grid>
                     <Grid item sm={9} xs={12} style={{paddingBottom: "30px"}}>
                     <Typography variant="h4">
-                        <Link href="#" color="secondary"> {article.heading} </Link>
+                        <Link href="#" color="primary"> {article.heading} </Link>
                     </Typography>
                     <p>{article.description}</p>
                     </Grid>
