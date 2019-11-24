@@ -33,10 +33,10 @@ export default function(props: Articles) {
                     <sub>{article.date}</sub>
                     </Grid>
                     <Grid item sm={9} xs={12} style={{paddingBottom: "30px"}}>
-                    <Typography variant="h4">
-                        <Link href="#" color="primary"> {article.heading} </Link>
-                    </Typography>
-                    <p>{article.description}</p>
+                        <Typography variant="h4">
+                            <Link href="#" color="primary"> {article.heading} </Link>
+                        </Typography>
+                        <p>{article.description}</p>
                     </Grid>
                 </Grid>
                 <Divider />
